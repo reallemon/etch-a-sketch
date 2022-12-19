@@ -7,20 +7,6 @@ function resetCanvas() {
   }
 }
 
-function random8BitNumber() {
-  return Math.floor(Math.random() * 255);
-}
-
-function randomRGB() {
-  const rgb = {
-    red: random8BitNumber(),
-    green: random8BitNumber(),
-    blue: random8BitNumber(),
-  };
-
-  return rgb;
-}
-
 function createPixels(squareSize) {
   const pixelPercentage = 100 / squareSize;
   const pixelHeight = canvasHeight / squareSize;
@@ -33,9 +19,12 @@ function createPixels(squareSize) {
     pixel.style.height = `${pixelHeight}px`;
 
     pixel.addEventListener('mouseenter', () => {
-      const { red, green, blue } = randomRGB();
+      let alpha = pixel.getAttribute('data-alpha') || 0;
+      alpha = +alpha + 0.1;
+      alpha = Math.min(1, alpha);
+      pixel.setAttribute('data-alpha', alpha);
 
-      pixel.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+      pixel.style.backgroundColor = `rgba(0,0,0,${alpha})`;
     });
 
     canvas.appendChild(pixel);
