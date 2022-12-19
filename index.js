@@ -18,6 +18,10 @@ function createPixels(squareSize) {
     pixel.style.flex = `0 0 ${pixelPercentage}%`;
     pixel.style.height = `${pixelHeight}px`;
 
+    pixel.addEventListener('mouseenter', () => {
+      pixel.style.backgroundColor = 'white';
+    });
+
     canvas.appendChild(pixel);
   }
 }
