@@ -8,7 +8,7 @@ function resetCanvas() {
 }
 
 function createPixels(squareSize) {
-  const pixelPercentage = Math.floor(100 / squareSize);
+  const pixelPercentage = Math.floor(99 / squareSize);
   const pixelHeight = Math.floor(canvasHeight / squareSize);
   resetCanvas();
 
@@ -22,4 +22,4 @@ function createPixels(squareSize) {
   }
 }
 
-createPixels(16);
+createPixels(2);
