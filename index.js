@@ -24,7 +24,7 @@ function createPixels(squareSize) {
       alpha = Math.min(1, alpha);
       pixel.setAttribute('data-alpha', alpha);
 
-      pixel.style.backgroundColor = `rgba(0,0,0,${alpha})`;
+      pixel.style.backgroundColor = `rgba(255,255,255,${alpha})`;
     });
 
     canvas.appendChild(pixel);
