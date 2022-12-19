@@ -12,3 +12,16 @@ body {
   border: 1px solid white;
   box-sizing: border-box;
 }
+
+#button {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin-bottom: 1em;
+  background-color: #9ece6a;
+  border-radius: 12px;
+  border: none;
+  color: #24283b;
+}

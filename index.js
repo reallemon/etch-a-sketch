@@ -26,4 +26,11 @@ function createPixels(squareSize) {
   }
 }
 
-createPixels(16);
+const button = document.querySelector('button');
+
+button.addEventListener('click', () => {
+  let squareSize = +prompt('What size canvas do you want?');
+  squareSize = Math.min(Math.max(squareSize, 1), 100);
+
+  createPixels(squareSize);
+});
