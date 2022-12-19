@@ -22,4 +22,4 @@ function createPixels(squareSize) {
   }
 }
 
-createPixels(2);
+createPixels(16);
